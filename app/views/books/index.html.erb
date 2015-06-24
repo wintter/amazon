@@ -1,0 +1,11 @@
+<div class="container">
+<div class="row books_preview">
+  <% @books.each do |book| %>
+      <div class="col-md-2 book_preview">
+        <%= link_to image_tag Faker::Avatar.image("my-own-slug", "150x250") %>
+        <%= link_to book.title, book_path(book) %>
+        <span class="font_opensans"><%= book.price %></span>
+      </div>
+  <% end %>
+</div>
+</div>
